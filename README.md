@@ -2,12 +2,12 @@
 
 ## Set-Up 
 
-###1. Connect Board. 
+### 1. Connect Board. 
 The board should be connected to any Pi. For testing the audio, connect either the SPDIF output or Analog output to some speakers. 
 Datasheet: 
 https://www.hifiberry.com/docs/data-sheets/datasheet-dac-dsp/
 
-###2. Configure the Software.
+### 2. Configure the Software.
 1. In /boot/config.txt - You may need to do this from root 'sudo -i'
 ..1. Remove `dtparam=audio=on`
 ..2. Add `dtoverlay=hifiberry-dacplusdsp` 
@@ -32,7 +32,7 @@ https://www.hifiberry.com/docs/software/configuring-linux-3-18-x/
 https://www.hifiberry.com/docs/software/using-the-dac-dsp-to-record-audio-from-s-pdif/
 https://github.com/hifiberry/hifiberry-dsp
 
-###3. Modify sigma schematic 
+### 3. Modify sigma schematic 
 
 Connect via TCP IP (port 8089) - Run as root
 
