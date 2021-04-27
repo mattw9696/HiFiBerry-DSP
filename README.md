@@ -39,3 +39,14 @@ Connect via TCP IP (port 8089) - Run as root
 Sources: 
 https://github.com/hifiberry/hifiberry-dsp/blob/master/doc/adaptexistingprofiles.md
 
+## CLI Tools
+
+### Volume Tool
+A volume control tool has been created to modify the volume based on a percentage. This has been developed in C and can be built using the make file.
+`make`
+This uses the provided SPI CLI tool dsptoolkit, based on the DSP schematic in this repo. To use with an updated schematic:
+..1. Update the DSP schematic and push to DSP.
+..2. Ensure the current version has been pushed to self boot memory
+..3. Acquire the register address of the Volume slider from the schematic, or from the exported artefacts. 
+..4. Modify the address value in volume.c
+..5. Re-make the dsp-volume tool   
