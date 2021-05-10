@@ -50,4 +50,23 @@ This uses the provided SPI CLI tool dsptoolkit, based on the DSP schematic in th
 2. Ensure the current version has been pushed to self boot memory
 3. Acquire the register address of the Volume slider from the schematic, or from the exported artefacts. 
 4. Modify the address value in volume.c
-5. Re-make the dsp-volume tool   
+5. Re-make the dsp-volume tool  
+ 
+## Example Profiles
+
+### IIR Filter Profile
+This is an example of how to export a project into a usable profile. This is achieved by writing the DSP schematic to the eeprom via the self-boot option in SigmaStudios, a sequence created and saved as an xml file. This XML file does not contain any metadata. 
+
+This sequence can be followed in the following guide.  
+https://github.com/hifiberry/hifiberry-dsp/blob/master/doc/adaptexistingprofiles.md
+
+To load the DSP profile:
+`dsptoolkit load-profile /path/to/profile/dacdsp-profile.xml`
+
+The additional IIR filter has been added at the very end of the audio path, prior to the SPDIF output. The IIR filter coefficients should be normalised, the register values and coeficient values for the filter are:
+```b2: 0x2D3 = 0.0
+b1: 0x2D4 = 0.0
+b0: 0x2D5 = 1.0
+a2: 0x2D6 = 0.0
+a1: 0x2D7 = 0.0
+```
