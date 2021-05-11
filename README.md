@@ -64,7 +64,8 @@ To load the DSP profile:
 `dsptoolkit load-profile /path/to/profile/dacdsp-profile.xml`
 
 The additional IIR filter has been added at the very end of the audio path, prior to the SPDIF output. The IIR filter coefficients should be normalised, the register values and coeficient values for the filter are:
-```b2: 0x2D3 = 0.0
+```
+b2: 0x2D3 = 0.0
 b1: 0x2D4 = 0.0
 b0: 0x2D5 = 1.0
 a2: 0x2D6 = 0.0
