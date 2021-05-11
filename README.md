@@ -13,7 +13,8 @@ https://www.hifiberry.com/docs/data-sheets/datasheet-dac-dsp/
 ..2. Add `dtoverlay=hifiberry-dacplusdsp` 
 ..3. Enable SPI & I2S
 2. Verify board is connected
-```root@pi:~# aplay -l
+```
+root@pi:~# aplay -l
 **** List of PLAYBACK Hardware Devices ****
 card 0: sndrpihifiberry [snd_rpi_hifiberrydacplusdsp_sou], device 0: Hifiberry DAC+DSP SoundCard HiFi dacplusdsp-codec-0 [Hifiberry DAC+DSP SoundCard HiFi dacplusdsp-codec-0]
   Subdevices: 1/1
